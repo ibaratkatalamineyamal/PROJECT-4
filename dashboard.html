@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onet Pixel Zoo - Dashboard</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/dashboard.css">
+</head>
+<body class="page-dashboard">
+<header class="navbar arcade"><div id="navbar"></div></header>
+<main class="arcade"><div class="arcade-inner">
+ <div class="marquee"><h1>📊 DASHBOARD</h1><span class="sub" id="dash-sub">STATISTIK PEMAIN</span></div>
+ <div class="dash-layout">
+  <div class="player-card"><div class="p-avatar" id="pav"></div><div class="p-name" id="pnm"></div><div class="p-rank" id="prk"></div></div>
+  <div class="stat-grid" id="stats"></div>
+ </div>
+ <a href="game.html" class="start-btn" style="text-decoration:none;text-align:center">🕹️ MULAI MAIN</a>
+ <div class="sec-hdr" style="margin-top:24px"><h2>⚔️ RIWAYAT PERMAINAN</h2></div>
+ <table class="battle-table" id="hist"></table>
+ <div class="sec-hdr" style="margin-top:24px"><h2>🏆 PERINGKAT (BROWSER INI)</h2></div>
+ <table class="rank-table" id="rk"></table>
+ <div class="arcade-foot">CREDIT: ∞ &nbsp;│&nbsp; <span class="blink">INSERT COIN</span></div>
+</div></main>
+<script src="js/core/util.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/auth.js"></script>
+<script src="js/core/scores.js"></script>
+<script src="js/core/ui.js"></script>
+<script src="js/pages/dashboard.js"></script>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onet Pixel Zoo - Main</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/game.css">
+</head>
+<body class="page-game">
+<button class="snd" id="snd" title="Suara (M)">🔊</button>
+<header class="navbar arcade"><div id="navbar"></div></header>
+<main class="view" id="v-main">
+<div class="topbar"><button id="back" class="back-btn">◀ DASHBOARD</button></div>
+<h1 class="game-title">ONET PIXEL ZOO</h1>
+<div class="hud">
+ <div class="box"><small>PEMAIN</small><b id="pl">-</b></div>
+ <div class="box"><small>SKOR</small><b id="sc">0</b></div>
+ <div class="box" id="tmbox"><small>WAKTU</small><b id="tm">4:00</b></div>
+ <div class="box"><small>REKOR</small><b id="bs">0</b></div>
+ <div class="box"><small>COMBO</small><b id="cb">0</b></div>
+</div>
+<div id="wrap">
+ <canvas id="cv" aria-label="Papan Onet"></canvas>
+ <div id="combo-disp"></div>
+ <div id="ov">
+  <h2 id="ot">ONET PIXEL ZOO</h2>
+  <p id="od">Cocokkan dua hewan yang sama. Jalur boleh berbelok maksimal dua kali dan tidak boleh melewati ubin lain. +100 per pasangan, combo sampai x5, bonus waktu saat menang. Waktu habis berarti kalah.</p>
+  <label for="sz">Ukuran papan</label>
+  <select id="sz"><option value="6">6 × 6 (Mudah)</option><option value="8">8 × 8</option><option value="10" selected>10 × 10</option></select>
+  <button id="go">MULAI MAIN</button>
+  <button id="back2" class="back-btn">◀ KEMBALI KE DASHBOARD</button>
+ </div>
+</div>
+<div class="bar">
+ <button id="hint">💡 PETUNJUK</button>
+ <button id="shuf">🔀 ACAK -50</button>
+ <button class="pwr" id="freeze">❄️ BEKUKAN (1)</button>
+ <button class="pwr" id="bomb">💣 BOM (3)</button>
+ <button id="rst">🔄 ULANG</button>
+</div>
+<div id="msg" aria-live="polite"></div>
+<div class="keys">H=Petunjuk  S=Acak  F=Bekukan  B=Bom  R=Ulang  M=Suara  Esc=Dashboard</div>
+</main>
+<script src="js/core/util.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/auth.js"></script>
+<script src="js/core/scores.js"></script>
+<script src="js/core/ui.js"></script>
+<script src="js/game/audio.js"></script>
+<script src="js/game/sprites.js"></script>
+<script src="js/game/starfield.js"></script>
+<script src="js/game/pathfinding.js"></script>
+<script src="js/game/game.js"></script>
+<script src="js/game/input.js"></script>
+<script src="js/game/renderer.js"></script>
+<script src="js/pages/game-page.js"></script>
+</body>
+</html>

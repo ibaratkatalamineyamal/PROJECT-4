@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Onet Pixel Zoo - Daftar</title>
+<link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/auth.css">
+</head>
+<body class="page-register">
+<header class="navbar arcade"><div id="navbar"></div></header>
+<main class="arcade"><div class="arcade-inner">
+ <div class="marquee"><h1>🕹️ CREATE ACCOUNT</h1><span class="sub">DAFTAR PEMAIN BARU</span></div>
+ <form id="form" class="auth-panel" autocomplete="off" novalidate>
+  <div class="field"><label for="username">▸ USERNAME</label><input id="username" type="text" maxlength="12" autocomplete="username"><span class="field-hint">3-12 karakter: huruf, angka, garis bawah</span></div>
+  <div class="field"><label for="password">▸ PASSWORD</label><input id="password" type="password" autocomplete="new-password"><span class="field-hint">Minimal 6 karakter</span></div>
+  <div class="field"><label for="confirm">▸ ULANGI PASSWORD</label><input id="confirm" type="password" autocomplete="new-password"></div>
+  <div class="field"><label>▸ PILIH AVATAR</label><div class="char-select" id="avs"></div></div>
+  <button type="submit" class="start-btn">▶ DAFTAR</button>
+  <div id="msg" class="form-msg" role="alert" aria-live="polite"></div>
+  <a href="login.html" class="auth-toggle">▸ SUDAH PUNYA AKUN? MASUK</a>
+ </form>
+ <p class="auth-note">Data akun disimpan di Local Storage browser ini.<br>Password hanya untuk simulasi belajar, bukan sistem aman.</p>
+</div></main>
+<script src="js/core/util.js"></script>
+<script src="js/core/storage.js"></script>
+<script src="js/core/auth.js"></script>
+<script src="js/core/scores.js"></script>
+<script src="js/core/ui.js"></script>
+<script src="js/pages/register.js"></script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+/* ===== GAME HUD ===== */
+.hud{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-bottom:10px}
+.box{background:var(--glass);backdrop-filter:blur(8px);border:3px solid var(--cy);border-radius:4px;
+box-shadow:0 0 12px #00e5ff33,inset 0 0 15px #00e5ff08;padding:8px 12px;min-width:88px;text-align:center;
+transition:transform .2s,box-shadow .2s}
+.box:hover{transform:translateY(-2px);box-shadow:0 0 20px #00e5ff55}
+.box small{display:block;color:var(--cy);font-size:8px}.box b{font-weight:400;font-size:13px;color:var(--ye);transition:color .3s}
+.time-warn b{color:#ff4444!important;animation:timeWarn .5s ease infinite}
+@keyframes timeWarn{0%,100%{opacity:1}50%{opacity:.3}}
+.frozen-ind b{color:var(--cy)!important;animation:none!important}
+h1.game-title{margin:6px 0 10px;font-size:clamp(14px,4vw,22px);color:var(--ye);
+text-shadow:0 0 10px var(--ye),3px 3px 0 var(--mg),6px 6px 0 var(--ink);text-align:center;font-weight:400;
+animation:titleGlow 3s ease-in-out infinite alternate}
+#wrap{position:relative;max-width:100%}
+#wrap.shake{animation:shake .15s linear}
+@keyframes shake{0%,100%{transform:translate(0)}20%{transform:translate(-4px,2px)}40%{transform:translate(4px,-2px)}
+60%{transform:translate(-2px,4px)}80%{transform:translate(2px,-4px)}}
+canvas{display:block;image-rendering:pixelated;border:3px solid var(--li);
+box-shadow:0 0 15px #7cff3a44,0 0 30px #ff2bd622,inset 0 0 30px #00000088;
+background:#0a0520;touch-action:manipulation;max-width:100%}
+.bar{display:flex;gap:8px;flex-wrap:wrap;justify-content:center;margin-top:12px}
+button,select{font:inherit;font-size:10px;color:var(--ink);background:var(--ye);border:3px solid var(--ink);
+padding:10px 14px;cursor:pointer;box-shadow:4px 4px 0 var(--mg),0 0 10px #ffe60033;
+transition:all .12s ease;position:relative;overflow:hidden}
+button:hover,select:hover{background:var(--li);transform:translate(-2px,-2px);
+box-shadow:6px 6px 0 var(--mg),0 0 20px #7cff3a55}
+button:active{transform:translate(3px,3px);box-shadow:1px 1px 0 var(--mg)}
+button:disabled{opacity:.35;cursor:not-allowed;transform:none!important;box-shadow:2px 2px 0 #333}
+button:focus-visible,select:focus-visible{outline:3px solid var(--cy);outline-offset:2px}
+.pwr{background:var(--cy);font-size:9px}.pwr:hover:not(:disabled){background:#00ffa3}
+#combo-disp{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);
+font-size:22px;color:var(--ye);pointer-events:none;opacity:0;z-index:5;
+text-shadow:0 0 20px var(--ye),0 0 40px var(--mg);transition:opacity .3s}
+#combo-disp.show{opacity:1;animation:comboIn .4s ease-out}
+@keyframes comboIn{0%{transform:translate(-50%,-50%) scale(2.5);opacity:0}100%{transform:translate(-50%,-50%) scale(1);opacity:1}}
+#msg{height:18px;margin-top:10px;color:var(--li);text-align:center}
+#ov{position:absolute;inset:0;background:rgba(11,7,32,0.92);backdrop-filter:blur(12px);
+display:flex;flex-direction:column;align-items:center;justify-content:center;gap:14px;text-align:center;padding:16px;
+border:2px solid #ff2bd633}
+#ov h2{margin:0;font-weight:400;font-size:clamp(14px,4vw,20px);color:var(--cy);
+text-shadow:0 0 15px var(--cy),3px 3px 0 var(--mg)}
+#ov p{margin:0;max-width:420px;color:#ddd}
+.keys{font-size:7px;color:#5a5080;text-align:center;margin-top:4px;max-width:500px}
+.snd{position:fixed;top:10px;right:10px;z-index:100;background:var(--glass);border:2px solid var(--cy);
+color:var(--cy);font-size:16px;padding:6px 8px;min-width:auto;box-shadow:0 0 10px #00e5ff33}
+.snd:hover{background:var(--cy);color:var(--ink)}
+
+/* tombol kembali */
+.topbar{width:100%;display:flex;justify-content:flex-start;margin-bottom:6px}
+.back-btn{background:var(--mg);color:var(--tx);font-size:9px}
+.back-btn:hover{background:var(--cy);color:var(--ink)}
